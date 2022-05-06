@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+    .pgt{
+    position: center;
+	width: 300px;
+	height: 300px;
+	border-radius: 50%;
+	background-color: orange;
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+    }
+    #sim{
+    	height: 25px;
+    	background-color: green;
+    	border-color: green;
+    	color: white;
+    }
+    #nao{
+    	height: 25px;
+    	background-color: red;
+    	border-color: red;
+    	color: white;
+    }
+    #bsim{
+    	width: 10px;
+    	height:20px;
+    	background-color:green;
+    	color: white;
+    }
+    #bnao{
+    	width:10px;
+    	height:20px;
+    	background-color:red;
+    	color: white;
+    }
+	</style>
+</head>
+<body>
+	<center>
+        <div class="pgt"> Você é a favor do Lockdawn em cidades com situação de colapso no sistema de saúde </div>
+        <p>
+	    <button id="sim" type="button" onclick="barra(1)">Sim</button>
+	    <button id="nao" type="button" onclick="barra(0)">Não</button>
+	    <div id="result">Resultado</div>
+	    <div >sim</div>
+	    <div id="bsim">0</div>
+	    <div >não</div>
+	    <div id="bnao">0</div>
+    </center>
+    <script type="text/javascript">
+    	var clicksim = 1;
+    	var clicknao = 1;
+    	function barra(opt){
+    		if(opt==1){
+    			clicksim += 1;
+    			document.getElementById("bsim").style.width = (clicksim * 10) + "px";
+    			document.getElementById("bsim").innerHTML = clicksim -1
+    		}
+    		else if (opt==0) {
+    			clicknao += 1;
+    			document.getElementById("bnao").style.width = (clicknao * 10) + "px";
+    			document.getElementById("bnao").innerHTML = clicknao -1
+    		}
+    	}
+    </script>
+</body>
+</html>
